@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "first_order_nominal",
+      "enabled": true,
+      "plant": {
+        "type": "first_order",
+        "gain": 1.0,
+        "tau": 0.8
+      },
+      "deadtime_sec": 0.0,
+      "noise": {
+        "type": "none",
+        "stddev": 0.0
+      },
+      "nonlinear": {
+        "type": "none",
+        "gain": 0.0
+      },
+      "runtime": {
+        "duration_sec": 6.0,
+        "dt_sec": 0.01,
+        "seed": 1001
+      }
+    },
+    {
+      "name": "second_order_with_deadtime",
+      "enabled": true,
+      "plant": {
+        "type": "second_order",
+        "wn": 4.0,
+        "zeta": 0.55,
+        "gain": 1.0
+      },
+      "deadtime_sec": 0.05,
+      "noise": {
+        "type": "gaussian",
+        "stddev": 0.01
+      },
+      "nonlinear": {
+        "type": "none",
+        "gain": 0.0
+      },
+      "runtime": {
+        "duration_sec": 6.0,
+        "dt_sec": 0.01,
+        "seed": 1002
+      }
+    },
+    {
+      "name": "second_order_tanh_switch",
+      "enabled": true,
+      "plant": {
+        "type": "second_order",
+        "wn": 4.0,
+        "zeta": 0.50,
+        "gain": 1.0
+      },
+      "deadtime_sec": 0.04,
+      "noise": {
+        "type": "gaussian",
+        "stddev": 0.003
+      },
+      "nonlinear": {
+        "type": "tanh",
+        "gain": 2.2
+      },
+      "runtime": {
+        "duration_sec": 6.0,
+        "dt_sec": 0.01,
+        "seed": 1003
+      }
+    },
+    {
+      "name": "disabled_case",
+      "enabled": false,
+      "plant": {
+        "type": "first_order",
+        "gain": 1.0,
+        "tau": 1.2
+      },
+      "deadtime_sec": 0.0,
+      "noise": {
+        "type": "none",
+        "stddev": 0.0
+      },
+      "nonlinear": {
+        "type": "none",
+        "gain": 0.0
+      },
+      "runtime": {
+        "duration_sec": 6.0,
+        "dt_sec": 0.01,
+        "seed": 1004
+      }
+    }
+  ]
+}

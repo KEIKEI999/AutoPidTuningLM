@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "initial_pid": {
+    "Kp": 0.25,
+    "Ki": 0.05,
+    "Kd": 0.00
+  },
+  "pid_limits": {
+    "Kp_min": 0.01,
+    "Kp_max": 10.0,
+    "Ki_min": 0.00,
+    "Ki_max": 5.0,
+    "Kd_min": 0.00,
+    "Kd_max": 2.0
+  },
+  "build": {
+    "mode": "mock",
+    "command": ["msbuild", "controller.sln"],
+    "working_dir": "controller/vs2017"
+  },
+  "llm": {
+    "provider": "local_ovms",
+    "model": "OpenVINO/Qwen3-8B-int4-ov",
+    "endpoint": "http://127.0.0.1:8000/v3/chat/completions",
+    "api_env": null,
+    "json_schema_name": "pid_candidate_response",
+    "prompt_language": "en"
+  },
+  "runtime": {
+    "seed": 999,
+    "abort_on_consecutive_failures": 2,
+    "heartbeat_timeout_sec": 0.25,
+    "control_output_limit": 3.0,
+    "vector_xl": {
+      "channel_index": 0,
+      "bitrate": 500000,
+      "rx_timeout_ms": 125,
+      "startup_wait_ms": 50,
+      "exchange_timeout_ms": 1000,
+      "resend_interval_ms": 50
+    }
+  }
+}

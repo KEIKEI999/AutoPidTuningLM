@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "initial_pid": {
+    "Kp": 0.25,
+    "Ki": 0.05,
+    "Kd": 0.00
+  },
+  "pid_limits": {
+    "Kp_min": 0.01,
+    "Kp_max": 10.0,
+    "Ki_min": 0.00,
+    "Ki_max": 5.0,
+    "Kd_min": 0.00,
+    "Kd_max": 2.0
+  },
+  "build": {
+    "mode": "msbuild",
+    "command": [
+      "controller.sln",
+      "/t:Build",
+      "/p:Configuration=Release",
+      "/p:Platform=Win32",
+      "/p:CanAdapter=vector_xl",
+      "/m",
+      "/nologo"
+    ],
+    "working_dir": "controller/vs2017"
+  },
+  "runtime": {
+    "seed": 4242,
+    "abort_on_consecutive_failures": 3,
+    "heartbeat_timeout_sec": 0.25,
+    "control_output_limit": 2.0
+  }
+}

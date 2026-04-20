@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "fixture_case",
+      "enabled": true,
+      "plant": {
+        "type": "first_order",
+        "gain": 1.0,
+        "tau": 0.8
+      },
+      "deadtime_sec": 0.0,
+      "noise": {
+        "type": "none",
+        "stddev": 0.0
+      },
+      "nonlinear": {
+        "type": "none",
+        "gain": 0.0
+      },
+      "runtime": {
+        "duration_sec": 5.0,
+        "dt_sec": 0.01,
+        "seed": 1001
+      }
+    }
+  ]
+}
+

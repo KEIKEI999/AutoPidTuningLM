@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1682
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "controller", "controller.vcxproj", "{22E3BA8E-1CEB-48E3-A7D7-6A57A603D06F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22E3BA8E-1CEB-48E3-A7D7-6A57A603D06F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{22E3BA8E-1CEB-48E3-A7D7-6A57A603D06F}.Debug|Win32.Build.0 = Debug|Win32
+		{22E3BA8E-1CEB-48E3-A7D7-6A57A603D06F}.Release|Win32.ActiveCfg = Release|Win32
+		{22E3BA8E-1CEB-48E3-A7D7-6A57A603D06F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+

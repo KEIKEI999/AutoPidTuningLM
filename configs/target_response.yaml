@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "name": "default_step_response_target",
+  "target": {
+    "setpoint": 1.0,
+    "rise_time_max": 1.0,
+    "settling_time_max": 2.5,
+    "overshoot_max": 5.0,
+    "steady_state_error_max": 0.01,
+    "allow_oscillation": false,
+    "allow_divergence": false,
+    "allow_saturation": false
+  },
+  "evaluation": {
+    "duration_sec": 6.0,
+    "sampling_dt_sec": 0.01,
+    "evaluation_start_sec": 0.0,
+    "evaluation_end_sec": 6.0,
+    "steady_state_window_sec": 1.0,
+    "settling_band_ratio": 0.02
+  },
+  "weights": {
+    "rise_time": 0.10,
+    "settling_time": 0.20,
+    "overshoot": 0.25,
+    "steady_state_error": 0.10,
+    "iae": 0.10,
+    "control_variation": 0.10,
+    "oscillation_penalty": 0.10,
+    "divergence_penalty": 0.05
+  },
+  "trial": {
+    "max_trials": 5,
+    "abort_on_consecutive_failures": 3
+  }
+}
